@@ -35,7 +35,11 @@ module.exports = function(app) {
   app.get("/user/topics", function(req, res) {
     res.render("topics", {});
   });
-  
+
+  app.get("/user/topics/view_topic", function(req, res) {
+    res.render("viewTopic", {});
+  });
+
   app.get("/user/archives", function(req, res) {
     res.render("archives", {});
   });

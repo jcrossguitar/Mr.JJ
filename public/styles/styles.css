@@ -26,3 +26,13 @@ body {
 .addTopic{
   margin-bottom: 10px;
 }
+
+.theFlashCard {
+  height: 500px;
+  width: 300px;
+  background-color: white;
+}
+
+.cardTurner{
+  margin-top: 5px;
+}

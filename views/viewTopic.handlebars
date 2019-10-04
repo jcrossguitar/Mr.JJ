@@ -47,22 +47,48 @@
       <a class="nav-link" href="/user/archives">Archives</a>
     </nav>
   </div>
-    <div class="col-7 container cardSections">
-      <button type="button" class="btn btn-primary btn-lg addTopic"><i class="fas fa-plus"></i>Add Topics</button>
-      <h3>Topics</h3>
-      <div class="card-deck">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">HTML</h5>
-            <p class="card-text">Study HTML.</p>
-            <a href="/user/topics/view_topic" class="btn btn-sm btn-primary">Study!</a>
-            <a href="#" class="btn btn-sm btn-warning">Archive</a>
-          </div>
-        </div>
+  <div class="col-7 container">
+    <h3>TOPIC NAME</h3>
+    <div class="card-deck">
+    <div class="card" style="width: 18rem;">
+      
+      <div class="card-body">
+        <p>Question</p>
+        <h5 class="card-title">What does HTML Stand for?</h5>
+        <a href="#" class="btn btn-sm btn-primary">Check Answer</a>
       </div>
     </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p>Answer</p>
+        <h5 class="card-title">Hypertext Markup Language</h5>
+        <a href="#" class="btn btn-sm btn-primary">Correct!</a>
+        <a href="#" class="btn btn-sm btn-danger">Not this time</a>
+      </div>
+    </div>
+    </div>
 
-  {{!-- ad --}}
+<nav class="cardTurner" aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  </div>
+
+  {{!-- add --}}
   <div class="col-3">
     <div class="bd-example">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
