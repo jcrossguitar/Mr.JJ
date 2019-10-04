@@ -24,6 +24,18 @@ module.exports = function(app) {
     res.render("user", {});
   });
 
+  app.get("/user/sprints", function(req, res) {
+    res.render("sprints", {});
+  });
+
+  app.get("/user/classes", function(req, res) {
+    res.render("classes", {});
+  });
+
+  app.get("/user/subjects", function(req, res) {
+    res.render("subjects", {});
+  });
+
   app.get("/create", function(req, res) {
     res.render("create", {});
   });

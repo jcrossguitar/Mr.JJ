@@ -1,3 +1,20 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+body {
+  background-color: lightgray;
+}
+
+.sideNav {
+  background-color: white;
+}
+
+#jumbo {
+  padding-left: 0px;
+}
+
+.fa-user-astronaut{
+  margin-right: 15px;
+  margin-left: 15px;
+}
