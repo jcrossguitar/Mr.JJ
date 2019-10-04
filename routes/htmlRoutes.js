@@ -24,16 +24,20 @@ module.exports = function(app) {
     res.render("user", {});
   });
 
-  app.get("/user/sprints", function(req, res) {
-    res.render("sprints", {});
+  app.get("/user/chunks", function(req, res) {
+    res.render("chunks", {});
   });
 
   app.get("/user/classes", function(req, res) {
     res.render("classes", {});
   });
 
-  app.get("/user/subjects", function(req, res) {
-    res.render("subjects", {});
+  app.get("/user/topics", function(req, res) {
+    res.render("topics", {});
+  });
+  
+  app.get("/user/archives", function(req, res) {
+    res.render("archives", {});
   });
 
   app.get("/create", function(req, res) {

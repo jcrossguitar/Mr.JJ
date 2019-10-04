@@ -6,9 +6,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/user">User</a>
-            </li>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-sm btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
             <li class="nav-item">
                 <a class="nav-link" href="/create">Create</a>
             </li>
@@ -19,9 +20,9 @@
 <div class="row">
     <div class="col-2 sideNav">
         <nav class="nav flex-column">
-            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link active" href="/user">Home</a>
             <a class="nav-link" href="#">Settings</a>
-            <a class="nav-link" href="#">What are sprints?</a>
+            <a class="nav-link" href="#">What are Chunks?</a>
         </nav>
     </div>
     <div class="col-10" id="jumbo">
@@ -40,13 +41,14 @@
     <div class="col-2 sideNav">
         <nav class="nav flex-column">
             <a class="nav-link" href="/create">Add Cards</a>
-            <a class="nav-link" href="/user/sprints">Sprints</a>
+            <a class="nav-link" href="/user/chunks">Chunks</a>
             <a class="nav-link" href="/user/classes">Classes</a>
-            <a class="nav-link" href="/user/subjects">Subjects</a>
+            <a class="nav-link" href="/user/topics">Topics</a>
+            <a class="nav-link" href="/user/archives">Archives</a>
         </nav>
     </div>
     <div class="col-7">
-        <div class="container">
+        <div class="container cardSections">
             <h3>Sprints</h3>
             <div class="card-deck">
                 <div class="card" style="width: 18rem;">
@@ -67,7 +69,7 @@
         </div>
     </div>
 
-{{!-- add --}}
+{{!-- ad --}}
 <div class="col-3">
     <div class="bd-example">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
