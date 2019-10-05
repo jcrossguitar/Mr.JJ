@@ -24,20 +24,20 @@ module.exports = function(app) {
     res.render("user", {});
   });
 
-  app.get("/user/chunks", function(req, res) {
-    res.render("chunks", {});
+  app.get("/user/chapters_concepts", function(req, res) {
+    res.render("chaptersConcepts", {});
   });
 
   app.get("/user/classes", function(req, res) {
     res.render("classes", {});
   });
 
-  app.get("/user/topics", function(req, res) {
-    res.render("topics", {});
+  app.get("/user/tests", function(req, res) {
+    res.render("tests", {});
   });
 
-  app.get("/user/topics/view_topic", function(req, res) {
-    res.render("viewTopic", {});
+  app.get("/user/tests/view_test", function(req, res) {
+    res.render("viewtest", {});
   });
 
   app.get("/user/archives", function(req, res) {
