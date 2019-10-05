@@ -1,3 +1,38 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+body {
+  background-color: lightgray;
+}
+
+.sideNav {
+  background-color: white;
+}
+
+#jumbo {
+  padding-left: 0px;
+}
+
+.fa-user-astronaut{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.cardSections{
+  margin-bottom: 30px;
+}
+
+.addTopic{
+  margin-bottom: 10px;
+}
+
+.theFlashCard {
+  height: 500px;
+  width: 300px;
+  background-color: white;
+}
+
+.cardTurner{
+  margin-top: 5px;
+}
