@@ -1,6 +1,5 @@
 {
-  // project name added
-  "name": "Mr.JJ",
+"name": "flashee",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
