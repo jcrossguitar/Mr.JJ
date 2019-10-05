@@ -26,6 +26,10 @@ module.exports = function(app) {
     res.render("user", {});
   });
 
+  app.get("/view_cards", function(req, res) {
+    res.render("viewCards", {});
+  });
+
   app.get("/user/chapters_concepts", function(req, res) {
     res.render("chaptersConcepts", {});
   });
