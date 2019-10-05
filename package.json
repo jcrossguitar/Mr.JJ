@@ -1,5 +1,6 @@
 {
-  "name": "node-handlebars-boilerplate",
+  // project name added
+  "name": "Mr.JJ",
   "version": "1.0.0",
   "description": "Project 2 Starter",
   "main": "server.js",
