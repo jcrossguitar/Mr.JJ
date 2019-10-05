@@ -1,5 +1,12 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS flashee;
+CREATE DATABASE flashee;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+USE flashee;
+
+CREATE TABLE cards (
+cardTitle VARCHAR(100),
+term VARCHAR (100),
+definition VARCHAR (200),
+user VARCHAR (100)
+);
+
