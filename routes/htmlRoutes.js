@@ -26,24 +26,8 @@ module.exports = function(app) {
     res.render("user", {});
   });
 
-  app.get("/user/chapters_concepts", function(req, res) {
-    res.render("chaptersConcepts", {});
-  });
-
-  app.get("/user/classes", function(req, res) {
-    res.render("classes", {});
-  });
-
-  app.get("/user/tests", function(req, res) {
-    res.render("tests", {});
-  });
-
-  app.get("/user/tests/view_test", function(req, res) {
-    res.render("viewtest", {});
-  });
-
-  app.get("/user/archives", function(req, res) {
-    res.render("archives", {});
+  app.get("/view_cards", function(req, res) {
+    res.render("viewCards", {});
   });
 
   app.get("/create", function(req, res) {
