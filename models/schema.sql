@@ -3,7 +3,7 @@ CREATE DATABASE flashee;
 
 USE flashee;
 
-CREATE TABLE Flashard (
+CREATE TABLE Flashcard (
 id INT NOT NULL AUTO_INCREMENT,
 question VARCHAR(100),
 answer VARCHAR (100),
