@@ -3,10 +3,10 @@ CREATE DATABASE flashee;
 
 USE flashee;
 
-CREATE TABLE cards (
-cardTitle VARCHAR(100),
-term VARCHAR (100),
-definition VARCHAR (200),
-user VARCHAR (100)
+CREATE TABLE Flashard (
+id INT NOT NULL AUTO_INCREMENT,
+question VARCHAR(100),
+answer VARCHAR (100),
+PRIMARY KEY (id)
 );
 

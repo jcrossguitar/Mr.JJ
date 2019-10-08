@@ -2,7 +2,7 @@
 USE flashee;
 
 -- Insert a set of records.
-INSERT INTO cards (cardTitle, term, definition, user) VALUES ('Anatomy', "Cranium", "The head yo", "Jon");
-INSERT INTO cards (cardTitle, term, definition, user) VALUES ('Algebra', "2 + 2 = ", "4", "Jon");
-INSERT INTO cards (cardTitle, term, definition, user) VALUES ('Music', "Treble Clef", "Starts the piece of music in the standard format EGBDF", "Jon");
-INSERT INTO cards (cardTitle, term, definition, user) VALUES ('Code', "variable", "a variable can be anything. ex var x = 5 + 9; var x = userName", "Jon");
+INSERT INTO Flashcard (question, answer) VALUES ("What does HTML stand for?", "HyperText MarkUp Language");
+INSERT INTO Flashcard (question, answer) VALUES ("What does CSS stand for?", "Cascading Style Sheets");
+INSERT INTO Flashcard (question, answer) VALUES ("What attribute is used to tell the browser where the link goes?", "<a href>");
+INSERT INTO Flashcard (question, answer) VALUES ("What does DOM stand for?", "Document Object Module");
