@@ -7,7 +7,7 @@ module.exports = function(app) {
       res.json(dbExamples);
     });
   });
-
+  // mine
   app.get("/api/flashcards", function(req, res) {
     db.Flashcards.findAll({}).then(function(dbFlashcard) {
       res.json(dbFlashcard);
@@ -18,6 +18,12 @@ module.exports = function(app) {
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
       res.json(dbExample);
+    });
+  });
+  // mine
+  app.post("/api/flashcards", function(req, res) {
+    db.Flashcards.create(req.body).then(function(dbFlashcard) {
+      res.json(dbFlashcard);
     });
   });
 
