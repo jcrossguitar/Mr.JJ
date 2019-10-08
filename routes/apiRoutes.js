@@ -8,6 +8,12 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/flashcards", function(req, res) {
+    db.Flashcards.findAll({}).then(function(dbFlashcard) {
+      res.json(dbFlashcard);
+    });
+  });
+
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
