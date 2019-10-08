@@ -6,7 +6,7 @@ USE flashee;
 CREATE TABLE Flashcard (
 id INT NOT NULL AUTO_INCREMENT,
 question VARCHAR(100),
-answer VARCHAR (100),
+answer VARCHAR (100),   
 PRIMARY KEY (id)
 );
 
