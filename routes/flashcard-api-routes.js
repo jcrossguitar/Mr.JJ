@@ -11,7 +11,6 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-
   // GET route for getting all of the flashcards
   app.get("/api/flashcards", function(req, res) {
     var query = {};
@@ -61,13 +60,11 @@ module.exports = function(app) {
 
   // PUT route for updating flashcards
   app.put("/api/flashcards", function(req, res) {
-    db.Flashcard.update(
-      req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      }).then(function(dbFlashcard) {
+    db.Flashcard.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbFlashcard) {
       res.json(dbFlashcard);
     });
   });
