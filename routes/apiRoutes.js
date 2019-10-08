@@ -24,7 +24,6 @@ module.exports = function(app) {
     });
   });
 
-
   // subject api routes
   app.get("/api/subjects", function(req, res) {
     // var query = {};
