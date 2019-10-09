@@ -44,7 +44,9 @@ $(document).ready(function() {
       } else {
         newTr.append("<td>0</td>");
       }
-      newTr.append("<td><a href='/blog?subject_id=" + subjectData.id + "'>Go to Flashcards</a></td>");
+      newTr.append("<td><a href='/view_cards?subject_id=" + 
+      // CHECK IT OUT!!
+      subjectData.id + "'>Go to Flashcards</a></td>");
       newTr.append("<td><a href='/create?subject_id=" + subjectData.id + "'>Create a Flashcard</a></td>");
       newTr.append("<td><a style='cursor:pointer;color:red' class='delete-subject'>Delete Subject</a></td>");
       return newTr;
