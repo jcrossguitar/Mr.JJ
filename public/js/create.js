@@ -38,10 +38,10 @@ $(document).ready(function() {
     }
     // Constructing a newFlashcard object to hand to the database
     var newFlashcard = {
-      title: titleInput
+      question: titleInput
         .val()
         .trim(),
-      body: bodyInput
+      answer: bodyInput
         .val()
         .trim(),
       SubjectId: subjectSelect.val()
@@ -62,7 +62,7 @@ $(document).ready(function() {
   function submitFlashcard(flashcard) {
     $.post("/api/flashcards", flashcard, function() {
       // window.location.href = "../../views/viewCards";
-      window.location.href = "/blog";
+      window.location.href = "/view_cards";
     });
   }
   
@@ -83,8 +83,10 @@ $(document).ready(function() {
       if (data) {
         console.log(data.SubjectId || data.id);
         // If this flashcard exists, prefill our cms forms with its data
-        titleInput.val(data.title);
-        bodyInput.val(data.body);
+        // titleInput.val(data.title);
+        // bodyInput.val(data.body);
+        titleInput.val(data.question);
+        bodyInput.val(data.answer);
         subjectId = data.SubjectId || data.id;
         // If we have a flashcard with this id, set a flag for us to know to update the flashcard
         // when we hit submit
@@ -131,8 +133,8 @@ $(document).ready(function() {
       data: flashcard
     })
       .then(function() {
-        // window.location.href = "../../views/viewCards";
-        window.location.href = "/blog";
+        window.location.href = "/view_cards";
+        // window.location.href = "/blog";
       });
   }
 });
