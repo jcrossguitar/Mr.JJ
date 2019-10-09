@@ -4,14 +4,16 @@ module.exports = function(sequelize, DataTypes) {
     var Flashcard = sequelize.define("Flashcard", {
       question: {
         type: DataTypes.STRING,
-        allowNull: false,
+        // allowNull: false,
+        allowNull: true,
         validate: {
           len: [1]
         }
       },
       answer: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        // allowNull: false,
+        allowNull: true,
         len: [1]
       }
     });
