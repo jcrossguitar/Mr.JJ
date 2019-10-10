@@ -61,8 +61,9 @@ $(document).ready(function() {
   // Submits a new flashcard and brings user to view cards page upon completion
   function submitFlashcard(flashcard) {
     $.post("/api/flashcards", flashcard, function() {
-      // window.location.href = "../../views/viewCards";
-      window.location.href = "/view_cards";
+      var SubjectId = subjectSelect.val();
+      // window.location.href = "/view_cards?subject_id=";
+      window.location.href = "/view_cards?subject_id=" + SubjectId;
     });
   }
   
@@ -133,8 +134,7 @@ $(document).ready(function() {
       data: flashcard
     })
       .then(function() {
-        window.location.href = "/view_cards";
-        // window.location.href = "/blog";
+        window.location.href = "/view_cards?subject_id=";
       });
   }
 });

@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: lightgray;
 }
 
 .sideNav {
@@ -37,8 +37,8 @@ body {
   margin-top: 5px;
 }
 
-.card {
-  background-color: solid blue;
+.flip-card {
+  background-color: transparent;
   width: 300px;
   height: 300px;
   perspective: 1000px;

@@ -26,38 +26,8 @@ module.exports = function(app) {
     res.render("user", {});
   });
 
-  app.get("/subjects/:subjectId", function(req, res) {
-    var subjectId = req.params.subjectId;
-    db.Subject.findOne({
-      where: {
-        id: subjectId
-      }
-    })
-      .then(function(subject) {
-        db.Flashcard.findAll({
-          where: {
-            SubjectId: subjectId
-          }
-        })
-          .then(function(flashcards) {
-            console.log("SUBJECT, FLASHCARDS", subject, flashcards);
-            res.render("viewCards", {
-              subject: subject,
-              flashcards: flashcards
-            });
-          })
-          .catch(function(err) {
-            console.log("ERR - No Flashcards for Subject", err);
-            res.render("viewCards", {
-              subject: subject,
-              flashcards: []
-            });
-          });
-      })
-      .catch(function(err) {
-        console.log("ERR - No subject for ID", err);
-        res.redirect("404");
-      });
+  app.get("/view_cards", function(req, res) {
+    res.render("viewCards", {});
   });
 
   app.get("/create", function(req, res) {
