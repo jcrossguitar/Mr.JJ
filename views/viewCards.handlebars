@@ -25,42 +25,46 @@
     </div> --}}
 
     <div class="container blog">
-    <div class="row">
-      <div class="col-sm-4 offset-sm-3">
-        <a class="btn btn-light" href="/create">New Flashcard</a>
+      <div class="row">
+        <h1>{{ subject.name }}</h1>
       </div>
-      <div class="col-sm-4 ">
-        <a class="btn btn-light" href="/subjects">Manage Subjects</a>
+      <div class="row">
+        <div class="col-sm-4 offset-sm-3">
+          <a class="btn btn-light" href="/create">New Flashcard</a>
+        </div>
+        <div class="col-sm-4 ">
+          <a class="btn btn-light" href="/subjects">Manage Subjects</a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      {{!-- <div class="col-md-6 offset-md-3 blog-container"> --}}
-        <div class="container">
-          <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="row">
-                  <div class="col-8 offset-2">
-                    <div class="card mt-4">
-                      <div class="card-body">
-                          <div class="flip-card-front">
-                            <div class="col-md-6 offset-md-3 blog-container">
+      {{#each flashcards}}
+      <div class="row">
+        {{!-- <div class="col-md-6 offset-md-3 blog-container"> --}}
+          <div class="container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="row">
+                    <div class="col-8 offset-2">
+                      <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="flip-card-front">
+                              <div class="col-md-6 offset-md-3 blog-container">
+                                {{ question }}
+                              </div>
                             </div>
-                          </div>
-                          <div class="flip-card-back">
-                            {{bodyInput}}
-                          <a href="/">← Back To Home</a>
-                          </div>
+                            <div class="flip-card-back">
+                              {{ answer }}
+                              <a href="/">← Back To Home</a>
+                            </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
           </div>
         </div>
-
-
       </div>
-    </div>
+      {{/each}}
   </div>
 
  

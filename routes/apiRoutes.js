@@ -44,7 +44,7 @@ module.exports = function(app) {
     db.Subject.findOne({
       where: {
         id: req.params.id,
-        include: [db.Post]
+        include: [db.Flashcard]
       }
     }).then(function(dbSubject) {
       res.json(dbSubject);
