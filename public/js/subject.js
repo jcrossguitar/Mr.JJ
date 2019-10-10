@@ -72,19 +72,19 @@ $(document).ready(function() {
         console.log(rows);
         subjectList.prepend(rows);
       }
-      else {
-        renderEmpty();
-      }
+      // else {
+      //   renderEmpty();
+      // }
     }
   
     // Function for handling what to render when there are no subjects
-    function renderEmpty() {
-      var alertDiv = $("<div>");
-      alertDiv.addClass("alert alert-danger");
-      alertDiv.text("You must create a Subject before you can create a Flashcard.");
-      subjectContainer.append(alertDiv);
-    }
-    console.log("hello");
+    // function renderEmpty() {
+    //   var alertDiv = $("<div>");
+    //   alertDiv.addClass("alert alert-danger");
+    //   alertDiv.text("You must create a Subject before you can create a Flashcard.");
+    //   subjectContainer.append(alertDiv);
+    // }
+    // console.log("hello");
   
     // Function for handling what happens when the delete button is pressed
     function handleDeleteButtonPress() {
