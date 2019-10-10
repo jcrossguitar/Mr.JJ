@@ -1,7 +1,7 @@
 getSubs();
 
 function getSubs() {
-  $.get("/api/subjects", function(data){
+  $.get("/api/subjects", function(data) {
     console.log("subjects", data);
     updateCard(data);
   });
@@ -26,7 +26,9 @@ function updateCard(subjectsData) {
     if (subName) {
       console.log(subName);
       $subjectCard.append("<h4 class=''>" + subName + "</h4>");
-      $subjectCard.append("<button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button>");
+      $subjectCard.append(
+        "<button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button>"
+      );
     }
   }
 }
