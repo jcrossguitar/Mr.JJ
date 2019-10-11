@@ -63,10 +63,14 @@ $(document).ready(function() {
 
   // This function constructs a flashcard's HTML
   function createNewRow(flashcard) {
-    // var formattedDate = new Date(flashcard.createdAt);
-    // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
-    var newFlashcardCard = $("<div>");
-    newFlashcardCard.addClass("card");
+    var cardFlip = $("<div>");
+    cardFlip.addClass("flip-card");
+    var cardInner = $("<div>");
+    cardInner.addClass("flip-card-inner");
+    var front = $("<div>");
+    front.addClass("flip-card-front");
+    var back = $("<div>");
+    back.addClass("flip-card-back");
     var newFlashcardCardHeading = $("<div>");
     newFlashcardCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
@@ -76,7 +80,6 @@ $(document).ready(function() {
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-info");
     var newFlashcardTitle = $("<h2>");
-    // var newFlashcardDate = $("<small>");
     var newFlashcardSubject = $("<h5>");
     newFlashcardSubject.text("Subject: " + flashcard.Subject.name);
     newFlashcardSubject.css({
@@ -89,17 +92,18 @@ $(document).ready(function() {
     var newFlashcardBody = $("<p>");
     newFlashcardTitle.text(flashcard.question + " ");
     newFlashcardBody.text(flashcard.answer);
-    // newFlashcardDate.text(formattedDate);
-    // newFlashcardTitle.prepend(deleteBtn);
     newFlashcardCardHeading.append(deleteBtn);
     newFlashcardCardHeading.append(editBtn);
     newFlashcardCardHeading.prepend(newFlashcardTitle);
     newFlashcardCardHeading.append(newFlashcardSubject);
     newFlashcardCardBody.append(newFlashcardBody);
-    newFlashcardCard.append(newFlashcardCardHeading);
-    newFlashcardCard.append(newFlashcardCardBody);
-    newFlashcardCard.data("flashcard", flashcard);
-    return newFlashcardCard;
+    front.append(newFlashcardCardHeading);
+    back.append(newFlashcardCardBody);
+    cardInner.append(front);
+    cardInner.append(back);
+    cardFlip.append(cardInner);
+    cardFlip.data("flashcard", flashcard);
+    return cardFlip;
   }
 
   // This function figures out which flashcard we want to delete and then calls deleteFlashcard
