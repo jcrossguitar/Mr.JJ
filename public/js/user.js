@@ -13,10 +13,6 @@ function updateCard(subjectsData) {
     var theSub = subjectsData[i];
     var $subjectCard = $("<div class='card text-center btn-sm col-4'>");
 
-    // Create the list group to contain the subjects and add the subject content for each
-    // var $subjectList = $("<ul>");
-    // $subjectList.addClass("list-group");
-
     // Add the newly created element to the DOM
     $("#subject-card").append($subjectCard);
 
@@ -27,7 +23,7 @@ function updateCard(subjectsData) {
       console.log(subName);
       $subjectCard.append("<h4 class=''>" + subName + "</h4>");
       $subjectCard.append(
-        "<button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button>"
+        "<a href='/view_cards'><button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button></a>"
       );
     }
   }
