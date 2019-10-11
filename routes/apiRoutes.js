@@ -1,5 +1,5 @@
 var db = require("../models");
-
+// var formidable = require("formidable");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/examples", function(req, res) {
@@ -124,4 +124,20 @@ module.exports = function(app) {
       res.json(dbFlashcard);
     });
   });
+
+  // app.post("/api/upload", function(req, res) {
+  //   var form = new formidable.IncomingForm();
+
+  //   form.parse(req);
+
+  //   form.on("fileBegin", function(name, file) {
+  //     file.path = __dirname + "/uploads/" + file.name;
+  //   });
+
+  //   form.on("file", function(name, file) {
+  //     console.log("Uploaded " + file.name);
+  //   });
+
+  //   res.sendFile(__dirname + "/uploads");
+  // });
 };

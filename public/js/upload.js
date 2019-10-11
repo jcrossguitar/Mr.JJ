@@ -1,13 +1,12 @@
-var express = require("express");
 var formidable = require("formidable");
+var express = require("express");
+var other = express();
 
-var app = express();
-
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/fileupload.html");
+other.get("/upload", function(req, res) {
+  res.sendFile(__dirname + "/upload");
 });
 
-app.post("/", function(req, res) {
+other.post("/upload", function(req, res) {
   var form = new formidable.IncomingForm();
 
   form.parse(req);
@@ -20,5 +19,5 @@ app.post("/", function(req, res) {
     console.log("Uploaded " + file.name);
   });
 
-  res.sendFile(__dirname + "/fileupload.html");
+  res.sendFile(__dirname + "/upload");
 });
