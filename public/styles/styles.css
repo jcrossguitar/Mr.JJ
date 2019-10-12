@@ -1,26 +1,124 @@
+html,body{
+  height: 100%;
+  /* margin: 0; padding: 0; border: none; */
+  background-color: lightgray;
+  min-height: 100%;
+  overflow: hidden;
+  background: url("../images/study.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Long Cang', cursive;
+  font-size: 20px;
+}
+.col-2,
+.col-10 {
+  margin-bottom: -9999px;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
 
-body {
-  background-color: lightgray;
-}
-
 .subj {
   background-color: white;
+  text-align: center;
 }
 
-.sideNav {
+.nav2 {
   background-color: white;
+  width: 100%;
+  
+}
+
+.nav2links {
+  padding: 7px;
 }
 
 #jumbo {
   padding-left: 0px;
 }
 
+.sideNav {
+  background: white;
+  /* opacity: 0.5; */
+  padding: 10px;
+  text-align: center;
+  font-size: 28px;
+}
+
+#navButtons {
+  margin-left: 65%;
+}
+
+.button {
+  border-radius: 10px;
+  background: white;
+  margin-right: 20px;
+  border: 1px solid black;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: blue;
+}
+
 .fa-user-astronaut{
   margin-right: 15px;
   margin-left: 15px;
+}
+
+.userMain,
+.uploadMain {
+  margin: 15%;
+  text-align: center;
+}
+
+.viewCardsMain {
+  text-align: center;
+  margin: 5% 15%;
+}
+
+.card-body {
+  font-size: 30px;
+}
+
+.delete {
+  margin-right: 10px;
+}
+
+.blog-container {
+  margin: 0 37%;
+}
+
+.createMain,
+.subjectMain {
+  text-align: center;
+}
+
+.createTitle{
+  color: white;
+}
+
+.createsBtn {
+  margin-right: 20px;
+}
+
+.mb-3 {
+  background: #f5f3f4;
+  padding: 10px;
+}
+
+.subjectMain {
+  padding: 5% 10%;
+  /* font-size: 18px; */
+}
+
+.subjectTitle {
+  color: white;
+  padding: 10px;
+}
+
+.subject-container{
+  background: white;
 }
 
 .cardSections{
@@ -70,7 +168,7 @@ body {
 }
 
 .flip-card-front {
-  background-color: #bbb;
+  background-color: white;
   color: black;
 }
 
@@ -103,6 +201,7 @@ font-family: 'Raleway', sans-serif;
 div.main{
 width: 300px;
 padding: 10px 50px 25px;
+margin: 10% 30%;
 border: 2px solid gray;
 border-radius: 10px;
 font-family: raleway;
@@ -123,7 +222,7 @@ border-radius: 5px;
 label{
 color: #464646;
 text-shadow: 0 1px 0 #fff;
-font-size: 14px;
+font-size: 18px;
 font-weight: bold;
 }
 center{
@@ -157,4 +256,12 @@ outline:none;
 }
 input[type=button]:hover{
 background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
+
+@media only screen and (max-width: 320px) {
+
+  body { 
+     font-size: 2em; 
+  }
+
 }
