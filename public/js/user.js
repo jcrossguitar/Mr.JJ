@@ -23,7 +23,10 @@ function updateCard(subjectsData) {
       console.log(subName);
       $subjectCard.append("<h4 class=''>" + subName + "</h4>");
       $subjectCard.append(
-        "<a href='/view_cards'><button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button></a>"
+        // "<a href='/view_cards'><button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button></a>"
+        "<a href='/view_cards?subject_id=" +
+          subjectsData[i].id +
+          "'><button class='btn btn-primary btn-sm m-3 mx-5'>Study!</button></a>"
       );
     }
   }

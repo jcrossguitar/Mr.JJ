@@ -92,11 +92,11 @@ $(document).ready(function() {
     var newFlashcardBody = $("<p>");
     newFlashcardTitle.text(flashcard.question + " ");
     newFlashcardBody.text(flashcard.answer);
-    newFlashcardCardHeading.append(deleteBtn);
-    newFlashcardCardHeading.append(editBtn);
+    newFlashcardCardBody.append(deleteBtn);
+    newFlashcardCardBody.append(editBtn);
     newFlashcardCardHeading.prepend(newFlashcardTitle);
     newFlashcardCardHeading.append(newFlashcardSubject);
-    newFlashcardCardBody.append(newFlashcardBody);
+    newFlashcardCardBody.prepend(newFlashcardBody);
     front.append(newFlashcardCardHeading);
     back.append(newFlashcardCardBody);
     cardInner.append(front);
@@ -111,6 +111,8 @@ $(document).ready(function() {
     var currentFlashcard = $(this)
       .parent()
       .parent()
+      .parent()
+      .parent()
       .data("flashcard");
     deleteFlashcard(currentFlashcard.id);
   }
@@ -120,16 +122,18 @@ $(document).ready(function() {
     var currentFlashcard = $(this)
       .parent()
       .parent()
+      .parent()
+      .parent()
       .data("flashcard");
     window.location.href = "/create?flashcard_id=" + currentFlashcard.id;
   }
 
   // This function displays a message when there are no flashcards
-  function displayEmpty(id) {
+  function displayEmpty(subjectId) {
     var query = window.location.search;
     var partial = "";
-    if (id) {
-      partial = " for Subject #" + id;
+    if (subjectId) {
+      partial = " for Subject #" + subjectId;
     }
     blogContainer.empty();
     var messageH2 = $("<h2>");
