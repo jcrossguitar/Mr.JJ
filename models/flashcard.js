@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
       question: {
         type: DataTypes.STRING,
         // allowNull: false,
-        allowNull: true,
+        // allowNull: true,
         validate: {
           len: [1]
         }
@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
       answer: {
         type: DataTypes.TEXT,
         // allowNull: false,
-        allowNull: true,
+        // allowNull: true,
         len: [1]
       }
     });
