@@ -10,6 +10,12 @@ html,body{
   font-family: 'Long Cang', cursive;
   font-size: 20px;
 }
+
+.ad {
+  width: 30%;
+  margin: 15% 40%;
+}
+
 .col-2,
 .col-10 {
   margin-bottom: -9999px;
