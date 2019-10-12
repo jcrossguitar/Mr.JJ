@@ -7,62 +7,48 @@
       <a class="nav-link" href="/view_cards">View Cards</a>
     </nav>
   </div>
-    <div class="col-10">
-      {{!-- new submit --}}
-      <div class="row subj">
-        <div class="col-12 pr-0 pl-0">
-          <div class="container">
-            <h2 class="mb-4 mt-4">Create New Cards</h2>
-          </div>
+  <div class="createMain col-10 pr-0" id="jumbo"> 
+    <form id="cms">
+    {{!-- <div class="form-row subj"> --}}
+      <h2 class="createTitle mb-4 mt-4">Create New Cards</h2>
+      <div class="container">
+        <div class="form-group">
+          <label for="category">
+            <h5 class="createTitle">Subject</h5>
+          </label>
+          <select class="custom-select" id="subject"> </select>
+          <a class="btn btn-light mt-3" href="/subjects">Add Subjects</a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="row">
-            <div class="col-12 pr-0 pl-0">
-              <form id="cms">
+    {{!-- </div> --}}
+  
 
-                <div class="form-row subj">
-                  <div class="container">
-                    <div class="form-group">
-                      <label for="category">
-                        <h5>Subject</h5>
-                      </label>
-                      <select class="custom-select" id="subject">
-                      </select>
-                      <a class="btn btn-light mt-3" href="/subjects">Add Subjects</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="container">
-                  <div class="form-group mt-4 subj">
-                    <div class="container pt-3 pb-3">
-                      <h5>New Card</h5>
-                      <hr>
-                      <div class="form-row">
-
-                        <div class="form-group col-md-6">
-                          <input placeholder="-Enter your question-" type="text" class="form-control" id="title">
-                          <label for="title">Question</label>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                          <textarea placeholder="-Enter the answer-" type="text" class="form-control"
-                            id="body"></textarea>
-                          <label for="body">Answer</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-success submit">Submit</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
+    <div class="container">
+      <div class="form-group mt-4 subj">
+        <div class="container pt-3 pb-3">
+          <h5>New Card</h5>
+          <hr>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="title">Question</label>
+              <input placeholder="-Enter your question-" type="text" class="form-control" id="title">
             </div>
+            <div class="form-group col-md-6">
+              <label for="body">Answer</label>
+              <textarea placeholder="-Enter the answer-" type="text" class="form-control" id="body"></textarea>
+            </div>
+             <button type="submit" class="btn btn-success submit">Submit</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
+</div>
+</div>
+        {{!-- </div>
+      </div>
+    </div>
+
+    </div> --}}
+  
 
