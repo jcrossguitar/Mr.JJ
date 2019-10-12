@@ -38,6 +38,10 @@ module.exports = function(app) {
     res.render("subjects", {});
   });
 
+  app.get("/upload", function(req, res) {
+    res.render("upload", {});
+  });
+
   app.get("/login", function(req, res) {
     res.render("login", {});
   });
